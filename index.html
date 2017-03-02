@@ -1,19 +1,159 @@
 <!DOCTYPE html>
 <html>
-<title>Portfolio Coming Soon</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="main.css">
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
+<head>
+  <title>Brian Polhamus' Portfolio</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/myScript.js"></script>
+
+</head>
 <body>
-<div class="bgimg display-container animate-opacity text-white">
-  <div class="display-middle">
-    <h1 class="jumbo animate-top">PORTFOLIO COMING SOON</h1>
-    <p class="large center" style="background-color: rgba(0, 0, 0, 0.81)">~2 Weeks left</p>
+  <!-- Nav bar -->
+  <div class="top">
+    <div class="bar" id="navBar">
+      <a href="javascript:void(0)" class="bar-item button hover-black hide-medium hide-large opennav right" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="bar-item button text-white">HOME</a>
+      <a href="#about" class="bar-item button hide-small text-white">ABOUT ME</a>
+      <a href="#work" class="bar-item button hide-small text-white">WORK EXPERIENCE</a>
+      <a href="#contact" class="bar-item button hide-small text-white">CONTACT</a>
+    </div>
+
+    <!-- Nav bar on smaller screens -->
+    <div id="navSmall" class="navblock white hide hide-large hide-medium">
+      <a href="#about" onclick="toggleFunction()">ABOUT</a>
+      <a href="#work" class="bar-item button hide-small">WORK EXPERIENCE</a>
+      <a href="#contact" class="bar-item button hide-small">CONTACT</a>
+    </div>
   </div>
-  <div class="display-bottomleft padding-large">
-    <p>Inspired by: W3Schools</p>
-  </div>
-</div>
-</body>
-</html>
+
+  <!-- First Parallax Image with Text -->
+  <div class="bgimg-1 display-container" id="home">
+    <div class="display-middle" style="white-space:nowrap;">
+      <span class="center padding-xlarge black xlarge wide animate-opacity">BRIAN
+        <span class="hide-small">POLHAMUS</span></span>
+      </div>
+    </div>
+
+    <!-- About Section Container -->
+    <div class="content container padding-64" id="about">
+      <h3 class="center">ABOUT ME</h3>
+      <p class="center"><em>I am a developer.</em></p>
+      <p>Currently attending the University of Cincinnati, upon graduation I will
+        become a full-time developer and project manager. I continue to expand my
+        knowledge outside of the classroom learning skills, tools, languages and
+        practices not found in typical classrooms. I enjoy innovating and solving
+        business problems.</p>
+        <div class="row">
+          <div class="col m6 center padding-large">
+            <p><b>Brian Polhamus</b></p><br>
+            <img src="/resources/portrait.jpg" alt="My Composite Picture" class="round image opacity hover-opacity-off" width="500" height="333">
+          </div>
+
+          <!-- Hide Text on small devices -->
+          <div class="col m6 hide-small padding-large">
+            <p>Welcome to my portfolio. Here you can find information about me and
+              my previous work. If you need more information click the links to find
+              my resume, past projects, and course learning. You can also contact me with
+              the information listed below. </p>
+            </div>
+          </div>
+          <p class="large center padding-16">Skills:</p>
+          <p class="wide">Java</p>
+          <div class="light-grey">
+            <div class="container padding-small dark-grey center" style="width:80%">80%</div>
+          </div>
+          <p class="wide">Web Development + Design</p>
+          <div class="light-grey">
+            <div class="container padding-small dark-grey center" style="width:80%">80%</div>
+          </div>
+          <p class="wide">SQL</p>
+          <div class="light-grey">
+            <div class="container padding-small dark-grey center" style="width:75%">75%</div>
+          </div>
+          <p class="wide">Adobe Suite</p>
+          <div class="light-grey">
+            <div class="container padding-small dark-grey center" style="width:60%">60%</div>
+          </div><br>
+          <p>Other skills: Android, Command line, Hadoop, Talend, Agile, Audio/Video Editing</p>
+        </div>
+      </div>
+
+      <div class="row center blue padding-16">
+        <div class="quarter section">
+          <span class="xlarge">3+</span><br>
+          Companies Worked For
+        </div>
+        <div class="quarter section">
+          <span class="xlarge">20+</span><br>
+          Projects Done
+        </div>
+        <div class="quarter section">
+          <span class="xlarge">5+</span><br>
+          Proficient Languages
+        </div>
+        <div class="quarter section">
+          <span class="xlarge">5+</span><br>
+          Leadership Positions Held
+        </div>
+      </div>
+
+      <!-- Second Image -->
+      <div class="bgimg-2 display-container opacity-min hover-opacity-off">
+        <div class="display-middle">
+          <span class="center padding-xlarge black xlarge wide animate-opacity">WORK EXPERIENCE</span>
+        </div>
+      </div>
+
+      <!-- Portfolio Section -->
+      <div class="content container padding-64" id="portfolio">
+        <h3 class="center">MY WORK</h3>
+        <p class="center"><em>Here are some of the projects I have worked on.
+          <br>Click on the images to see more</em></p>
+          <p>Under Construction</p>
+        </div>
+
+        <!-- Third Parellax Image -->
+        <div class="bgimg-3 display-container opacity-min hover-opacity-off">
+          <div class="display-middle">
+            <span class="center padding-xlarge black xlarge wide animate-opacity">CONTACT</span>
+          </div>
+        </div>
+
+        <!-- Contact section -->
+        <div class="content container padding-64" id="contact">
+          <h3 class="center">WHERE I WORK</h3>
+          <p class="center"><em>Feel Free to reach out to me anytime!</em></p>
+
+          <div class="row padding section">
+            <div class="col m12 container center">
+              <div class="large margin-bottom">
+                <p>Cincinnati, OH</p>
+                <p>Email: bpolhamus13@gmail.com</p>
+              </div>
+              <p>Feel free to leave any feedback or contact me at anytime.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="center blue padding-64 opacity-min hover-opacity-off">
+          <a href="#home" class="button">
+            To the top
+          </a>
+          <div class="xlarge section">
+            <a href="https://www.linkedin.com/in/brian-polhamus-647b48b3"class="button hover-indigo">LinkedIn</a>
+            <a href="pdf.html" class="button hover-red">Resume</a>
+            <a href="https://github.com/bpolhamus13" class="button hover-green">GitHub</a>
+          </div>
+          <p>Last update: 2/28/2017</p>
+        </footer>
+        <script type="text/javascript">
+
+        </script>
+      </body>
+      </html>
